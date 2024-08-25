@@ -4,6 +4,10 @@ const userRouter = require('./routes/userRouter');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
+const cors = require('cors');
+
+
+app.use(cors()); // Enable CORS for all routes
 
 // Set security HTTP headers
 app.use(helmet());
